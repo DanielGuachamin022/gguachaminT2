@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gguachaminT2.Vistas.ReporteNotas">
+    <VerticalStackLayout
+        Spacing="5"
+        Padding="30">
+        <Label 
+            Text="Sistema de Calificaciones"
+            HorizontalTextAlignment="Center"
+            FontSize="48"
+            TextColor="Red"/>
+        <Image Source="https://www.uisrael.edu.ec/wp-content/uploads/2023/01/logo-uisrael@2x-e1674848533171.png"
+               HeightRequest="80"/>
+        <Picker x:Name="pkEstudiantes"
+                Title="Estudiante:">
+            <Picker.Items>
+                <x:String>Daniel Guachamin</x:String>
+                <x:String>Kerly Alobuela</x:String>
+                <x:String>Guillermo Tituaña</x:String>
+                <x:String>Dayana Gutierrez</x:String>
+                <x:String>Alexander Gonzales</x:String>
+            </Picker.Items>
+        </Picker>
+        <Label 
+            Text="Notas de seguimiento 1"
+            FontSize="20"
+            TextColor="Blue"/>
+        <Entry x:Name="TxtNotaSeg1"
+               Placeholder="Nota seguimiento 1"
+               Keyboard="Numeric"/>
+        <Entry x:Name="TxtNotaExm1"
+               Placeholder="Nota examen 1"
+               Keyboard="Numeric"/>
+        <Label 
+            Text="Notas de seguimiento 2"
+            FontSize="20"
+            TextColor="Blue"/>
+        <Entry x:Name="TxtNotaSeg2"
+               Placeholder="Nota seguimiento 2"
+               Keyboard="Numeric"/>
+        <Entry x:Name="TxtNotaExm2"
+               Placeholder="Nota examen 2"
+               Keyboard="Numeric"/>
+        <DatePicker x:Name="dpFecha"
+                    Date="04/08/2024"
+                    Format="MM/dd/yyyy"/>
+        <Button x:Name="btnCalcularNotaFinal"
+                Text="Calcular Nota Final"
+                Clicked="btnCalcularNotaFinal_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
