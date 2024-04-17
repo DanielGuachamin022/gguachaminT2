@@ -6,6 +6,6 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new NavigationPage( new Vistas.ReporteNotas());
+		MainPage = new NavigationPage( new Vistas.Login());
 	}
 }

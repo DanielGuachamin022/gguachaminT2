@@ -12,39 +12,99 @@
             TextColor="Red"/>
         <Image Source="https://www.uisrael.edu.ec/wp-content/uploads/2023/01/logo-uisrael@2x-e1674848533171.png"
                HeightRequest="80"/>
-        <Picker x:Name="pkEstudiantes"
-                Title="Estudiante:">
-            <Picker.Items>
-                <x:String>Daniel Guachamin</x:String>
-                <x:String>Kerly Alobuela</x:String>
-                <x:String>Guillermo Tituaña</x:String>
-                <x:String>Dayana Gutierrez</x:String>
-                <x:String>Alexander Gonzales</x:String>
-            </Picker.Items>
-        </Picker>
-        <Label 
-            Text="Notas de seguimiento 1"
-            FontSize="20"
-            TextColor="Blue"/>
-        <Entry x:Name="TxtNotaSeg1"
-               Placeholder="Nota seguimiento 1"
-               Keyboard="Numeric"/>
-        <Entry x:Name="TxtNotaExm1"
-               Placeholder="Nota examen 1"
-               Keyboard="Numeric"/>
-        <Label 
+        <Label x:Name="lblUsuario"
+               TextColor="Black"
+               HorizontalTextAlignment="Start"
+               FontSize="30"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Seleccione el estudiante:"
+                   HorizontalTextAlignment="Start"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <Picker x:Name="pkEstudiantes"
+                    Grid.Row="0"
+                   Grid.Column="1">
+                <Picker.Items>
+                    <x:String>Daniel Guachamin</x:String>
+                    <x:String>Kerly Alobuela</x:String>
+                    <x:String>Guillermo Tituaña</x:String>
+                    <x:String>Dayana Gutierrez</x:String>
+                    <x:String>Alexander Gonzales</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label 
+                Text="Notas de parcial 1"
+                FontSize="20"
+                TextColor="Blue"
+                Grid.Row="1"
+                Grid.Column="0"/>
+            <Label Text="Ingrese nota seguimiento 1:"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="2"
+                   Grid.Column="0"/>
+            <Entry x:Name="TxtNotaSeg1"
+                   Placeholder="Nota seguimiento 1"
+                   Keyboard="Numeric"
+                   Grid.Row="2"
+                   Grid.Column="1"/>
+            <Label Text="Ingrese nota examen 1:"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="3"
+                   Grid.Column="0"/>
+            <Entry x:Name="TxtNotaExm1"
+                   Placeholder="Nota examen 1"
+                   Keyboard="Numeric"
+                   Grid.Row="3"
+                   Grid.Column="1"/>
+            <Label 
             Text="Notas de seguimiento 2"
             FontSize="20"
-            TextColor="Blue"/>
-        <Entry x:Name="TxtNotaSeg2"
-               Placeholder="Nota seguimiento 2"
-               Keyboard="Numeric"/>
-        <Entry x:Name="TxtNotaExm2"
-               Placeholder="Nota examen 2"
-               Keyboard="Numeric"/>
-        <DatePicker x:Name="dpFecha"
+            TextColor="Blue"
+                Grid.Row="4"
+                Grid.Column="0"/>
+            <Label Text="Ingrese nota seguimiento 2:"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="5"
+                   Grid.Column="0"/>
+            <Entry x:Name="TxtNotaSeg2"
+                   Placeholder="Nota seguimiento 2"
+                   Keyboard="Numeric"
+                   Grid.Row="5"
+                   Grid.Column="1"/>
+            <Label Text="Ingrese nota examen 1:"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="6"
+                   Grid.Column="0"/>
+            <Entry x:Name="TxtNotaExm2"
+                   Placeholder="Nota examen 2"
+                   Keyboard="Numeric"
+                   Grid.Row="6"
+                   Grid.Column="1"/>
+            <Label Text="Seleccione una fecha:"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="7"
+                   Grid.Column="0"/>
+            <DatePicker x:Name="dpFecha"
                     Date="04/08/2024"
-                    Format="MM/dd/yyyy"/>
+                    Format="MM/dd/yyyy"
+                    Grid.Row="7"
+                    Grid.Column="1"/>
+        </Grid>
+        
         <Button x:Name="btnCalcularNotaFinal"
                 Text="Calcular Nota Final"
                 Clicked="btnCalcularNotaFinal_Clicked"/>

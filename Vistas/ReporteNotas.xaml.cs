@@ -2,9 +2,11 @@ namespace gguachaminT2.Vistas;
 
 public partial class ReporteNotas : ContentPage
 {
-	public ReporteNotas()
+	public ReporteNotas(string usuario)
 	{
 		InitializeComponent();
+        DisplayAlert("Bienvenido", usuario, "Cerrar");
+        lblUsuario.Text = "Bienvenido " + usuario;
 	}
 
     private void btnCalcularNotaFinal_Clicked(object sender, EventArgs e)
